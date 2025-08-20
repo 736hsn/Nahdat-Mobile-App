@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:supervisor/src/core/sizing/size_config.dart';
+
+
+const regular = 14.sp;
+const medium = 16.sp;
+const semiBold = 18.sp;
+const bold = 20.sp;
+final borderRadius = BorderRadius.circular(3.sp);
+Color hexToColor(String code) {
+  code.length != 6 ? code = 'ffffff' : code = '#$code';
+  return Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
+}
